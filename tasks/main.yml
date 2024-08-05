@@ -1,0 +1,10 @@
+---
+# tasks file for hcloud-firewall
+- name: Create Firewalls
+  hetzner.hcloud.firewall:
+    api_token: "{{ hcloud_api_token }}"
+    name: "{{ item.key }}"
+    labels: "{{ item.value.labels | default(omit) }}"
+    rules: "{{ item.value.rules | default(omit) }}"
+    state: "{{ item.value.state | default('present') }}"
+  loop: "{{ hcloud_firewalls | dict2items }}"

@@ -1,0 +1,12 @@
+---
+# defaults file for hcloud-firewall
+hcloud_firewalls:
+  #   default_firewall:
+  #     rules: []
+  #       # - direction: in
+  #       #   protocol: icmp
+  #       #   source_ips:
+  #       #     - 0.0.0.0/0
+  #       #     - ::/0
+  #       #   description: allow icmp in
+  #     labels: {}
